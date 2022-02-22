@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    overflow: hidden;
+    background-color: #3c87ff;
+}
+
+.wrapper {
+    max-width: 405px;
+    margin: 135px auto;
+    background-color: #fff;
+    padding: 28px 0;
+    border-radius: 7px;
+}
+
+.task__input {
+    height: 52px;
+    padding: 0 25px;
+    position: relative;
+
+}
+
+.task__input input {
+    height: 100%;
+    width: 100%;
+    padding: 0 20px 0 53px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    outline: none;
+}
+
+.task__input input::placeholder {
+    color: #bfbfbf;
+}
+
+.task__input i {
+    position: absolute;
+    top: 50%;
+    transform: translate(17px, -50%);
+}
+
+.controls {
+    padding: 18px 25px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filters span {
+    cursor: pointer;
+    margin: 0 8px;
+    font-size: 17px;
+}
+
+.filters span:first-child {
+    margin-left: 0;
+}
+
+.clear__btn {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    padding: 7px 13px;
+    background-color: #3c87ff;
+    font-size: 13px;
+}
+
+.active {
+    color: #3c87ff;
+}
+
+.task__box {
+    margin: 20px 25px;
+}
+
+li {
+    list-style: none;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 17px;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.task:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+
+.task label {
+    display: flex;
+    align-items: center;
+}
+
+.task label p {
+    margin-left: 5px;
+}
+
+.setting {
+    cursor: pointer;
+    position: relative;
+}
+
+.task__menu {
+    position: absolute;
+    width: 100px;
+    padding: 5px 0;
+    right: -5px;
+    top: -1px;
+    left: -15px;
+    background-color: #fff;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    z-index: 2;
+    transform: scale(0);
+    transition: all 0.3s ease-in;
+    transform-origin: top right;
+}
+
+.setting .task__menu.show {
+    transform: scale(1);
+}
+
+.task__menu i {
+    margin-right: 5px;
+}
+
+.task__menu li {
+    min-height: 25px;
+    height: 100%;
+    font-size: 16px;
+    margin-bottom: 2px;
+    padding: 10px 15px;
+}
+
+.task__menu li:last-child {
+    margin-bottom: 0;
+}
+
+.task__menu li:hover {
+    background-color: #f5f5f5;
+}
+
+p.checked {
+    text-decoration: line-through;
+}
